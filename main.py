@@ -53,6 +53,20 @@ def go(config: DictConfig):
             ##################
             # Implement here #
             ##################
+            # Download from W&B the raw dataset and apply some basic data cleaning, exporting the result to a new artifact
+            _ = mlflow.run(
+                f"{config['main']['src_repository']}/basic_cleaning",
+                "main",
+                env_manager="conda",
+                parameters={
+                    "input_artifact": config["basic_cleaning"]["input_artifact"],
+                    "output_artifact": config["basic_cleaning"]["output_artifact"],
+                    "output_type": config["basic_cleaning"]["output_type"],
+                    "output_description": config["basic_cleaning"]["output_description"],
+                    "min_price": config["basic_cleaning"]["min_price"],
+                    "max_price": config["basic_cleaning"]["max_price"],
+                },
+            )
             pass
 
         if "data_check" in active_steps:
