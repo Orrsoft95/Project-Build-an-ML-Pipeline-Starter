@@ -2,7 +2,6 @@ main:
   components_repository: "components"
   # All the intermediate files will be copied to this directory at the end of the run.
   # Set this to null if you are running in prod
-  src_repository: "src"
   project_name: nyc_airbnb
   experiment_name: development
   steps: all
@@ -10,13 +9,6 @@ etl:
   sample: "sample1.csv"
   min_price: 10  # dollars
   max_price: 350  # dollars
-basic_cleaning:
-  input_artifact: "sample.csv:latest"
-  output_artifact: "clean_sample.csv"
-  output_type: str
-  output_description: "A cleaned version of our initial sample.csv artifact"
-  min_price: 10
-  max_price: 350
 data_check:
   kl_threshold: 0.2
 modeling:
