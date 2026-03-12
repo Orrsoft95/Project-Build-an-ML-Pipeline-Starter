@@ -1,4 +1,5 @@
 MARQEZ ORR WANDB PROJECT: https://wandb.ai/orrsoft95-western-governors-university/nyc_airbnb?nw=nwuserorrsoft95
+MARQEZ ORR GITHUB REPO: https://github.com/Orrsoft95/Project-Build-an-ML-Pipeline-Starter
 
 # Build an ML Pipeline for Short-Term Rental Prices in NYC
 You are working for a property management company renting rooms and properties for short periods of 
